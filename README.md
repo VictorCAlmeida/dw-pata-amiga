@@ -25,7 +25,10 @@ Antes da transformação e carga para o modelo dimensional (`dw_pata_amiga`), fo
 
 ---
 
-## 3. Arquitetura e Modelo Dimensional
+## 3. Diagrama do Modelo Dimensional
+![Diagrama Star Schema](diagrama_pata_amiga.png)
+
+## 4. Arquitetura e Modelo Dimensional
 O Data Warehouse segue o modelo estrela (*Star Schema*), estruturado em torno da tabela fato `fato_pedido` e rodeado pelas seguintes dimensões[cite: 1, 2, 3]:
 * `dim_tempo` (utilizada em esquema de *role-playing* para Data do Pedido e Data de Entrega)[cite: 1, 3]
 * `dim_loja` (fotografia atual das filiais)[cite: 3]
@@ -35,7 +38,7 @@ O Data Warehouse segue o modelo estrela (*Star Schema*), estruturado em torno da
 
 ---
 
-## 4. Respostas às Perguntas de Negócio (Tarefa 5)
+## 5. Respostas às Perguntas de Negócio (Tarefa 5)
 As consultas analíticas executadas no arquivo `05-perguntas.sql` permitiram extrair os seguintes insights para a diretoria[cite: 3]:
 
 * **P1 (Desempenho por Categoria/Canal):** Identificação dos tempos médios logísticos por etapa, apontando o intervalo com maior retenção operacional no processo de entrega da rede[cite: 2, 3].
@@ -48,7 +51,7 @@ As consultas analíticas executadas no arquivo `05-perguntas.sql` permitiram ext
 
 ---
 
-## 5. Como Executar os Scripts
+## 6. Como Executar os Scripts
 A ordem correta de execução no MySQL Workbench é:
 1. `01-carga-staging.sql` (Criação e carga das tabelas brutas)[cite: 2, 3]
 2. `02-dimensoes-prontas.sql` (Criação das dimensões estáticas)[cite: 3]

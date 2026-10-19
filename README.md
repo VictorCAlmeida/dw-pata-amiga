@@ -53,8 +53,9 @@ As consultas analíticas executadas no arquivo `05-perguntas.sql` permitiram ext
 
 ## 6. Como Executar os Scripts
 A ordem correta de execução no MySQL Workbench é:
-1. `01-carga-staging.sql` (Criação e carga das tabelas brutas)[cite: 2, 3]
-2. `02-dimensoes-prontas.sql` (Criação das dimensões estáticas)[cite: 3]
-3. `03-dimensoes.sql` (População das dimensões dinâmicas e da tabela ponte)[cite: 3]
-4. `04-fato.sql` (Carga da tabela fato com conversões, modo estrito ajustado e cálculos de prazos)[cite: 1, 2, 3]
-5. `05-perguntas.sql` (Execução das queries analíticas para a diretoria)[cite: 3]
+1. `00-conferencia.sql` (Auditoria e diagnóstico inicial da Staging)
+2. `01-carga-staging.sql` (Criação e carga das tabelas brutas)[cite: 2, 3]
+3. `02-dimensoes-prontas.sql` (Criação das dimensões estáticas)[cite: 3]
+4. `03-dimensoes.sql` (População das dimensões dinâmicas e da tabela ponte)[cite: 3]
+5. `04-fato.sql` (Carga da tabela fato com conversões, modo estrito ajustado e cálculos de prazos)[cite: 1, 2, 3]
+6. `05-consultas.sql` / `06-perguntas.sql` (Execução das queries analíticas para a diretoria)[cite: 3]
